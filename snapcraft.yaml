@@ -1,0 +1,18 @@
+name: sdt-sample
+version: '1.0'
+summary: Personal training
+description: Checking the upload procedure to snap store
+
+confinement: strict
+base: core18
+
+parts:
+  super-cool-app:
+    plugin: flutter
+    source: https://github.com/sdtech-yamamotoshunji/sdt-sample.git
+    flutter-target: lib/main.dart
+
+apps:
+  sdtsample:
+    command: sdtsample
+    extensions: [flutter-dev]
